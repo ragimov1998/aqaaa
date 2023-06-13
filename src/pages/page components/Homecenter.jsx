@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Homecenter() {
   return (
@@ -13,7 +14,9 @@ function Homecenter() {
             <p className="item_title_about">
               Bütün növ ödənişlər Birbank-la daha rahat
             </p>
+            <Link to="ödənişlər">
             <button className="btn">Ödəniş et</button>
+            </Link>
           </div>
         </div>
 
@@ -26,7 +29,9 @@ function Homecenter() {
             <p className="item_title_about">
               Çoxsaylı Birbank partnyor şəbəkəsindən yararlan
             </p>
+            <Link to="/partnyorlar">
             <button className="btn">Bütün partnyorlar</button>
+            </Link>
           </div>
         </div>
         
@@ -39,7 +44,10 @@ function Homecenter() {
             <p className="item_title_about">
               Birbankın aktiv kampaniyalarından yararlanmağa tələs
             </p>
+            <Link to="/kampaniyalar">
             <button className="btn">Daha ətraflı</button>
+
+            </Link>
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import React from "react";
 import Slide from "./Slide";
 import Homecenter from "./page components/Homecenter";
 import {widget} from "./page components/productwidget"
+import { Link } from "react-router-dom";
 function Home() {
   return (
     <>
@@ -19,7 +20,10 @@ function Home() {
             <div className="text">
                <h1 className="title">{item.title}</h1>
             <p className="about">{item.about}</p>
+            <Link to="/kreditler">
             <button className="btn">{item.btn}</button>
+
+            </Link>
             </div>
            
             </div>
@@ -31,7 +35,10 @@ function Home() {
             <div className="text">
               <h1 className="title">{item.title2}</h1>
             <p className="about">{item.about2}</p>
+            <Link to="/kartlar">
             <button className="btn">{item.btn}</button>
+
+            </Link>
             </div>
             
             </div>

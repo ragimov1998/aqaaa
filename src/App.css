@@ -13,6 +13,10 @@
   cursor: pointer;
 }
 
+.hidden {
+  display: none;
+}
+
 .header-contain {
   width: 100%;
 }
@@ -52,7 +56,7 @@
   width: 100%;
   height: 2px;
   background-color: #ff0000;
-  bottom: 30px;
+  bottom: 35px;
   left: 0;
   transform-origin: left;
   transform: scaleX(0);
@@ -62,6 +66,26 @@
   transform: scaleX(1);
 }
 .header-contain .header-component .left .list a {
+  color: #52575c;
+}
+.header-contain .header-component .left .active {
+  font-family: system-ui;
+  font-size: 18px;
+  font-stretch: expanded;
+  font-weight: 600;
+  transition: all linear 0.35s;
+  position: relative;
+}
+.header-contain .header-component .left .active::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #ff0000;
+  bottom: 35px;
+  left: 0;
+}
+.header-contain .header-component .left .active a {
   color: #52575c;
 }
 .header-contain .header-component .right {
@@ -265,10 +289,11 @@
 .service {
   width: 100%;
   font-family: sans-serif;
+  margin: 50px 0;
 }
 .service_container {
   width: 60%;
-  margin: 2% auto 3%;
+  margin: 0 auto;
   display: flex;
 }
 .service_container_item {
@@ -486,4 +511,546 @@
 }
 .kocurmeler .bottom li span i {
   opacity: 0.7;
+}
+
+.cards {
+  width: 100%;
+  margin: 50px 0;
+}
+.cards .reklam {
+  width: 100%;
+}
+.cards .reklam .title {
+  font-size: 45px;
+  color: #bc0c19;
+}
+.cards .reklam_cards {
+  width: 60%;
+  margin: 0 auto;
+}
+.cards .reklam_cards_type {
+  background-image: url(https://img5.goodfon.com/wallpaper/nbig/d/90/fon-wallpaper-lines-abstract.jpg);
+}
+.cards .reklam_cards_type .top {
+  display: flex;
+  font-family: sans-serif;
+  color: #fff;
+}
+.cards .reklam_cards_type .top .left {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  padding: 76px 40px 50px;
+}
+.cards .reklam_cards_type .top .left h1 {
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+.cards .reklam_cards_type .top .left p {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.cards .reklam_cards_type .top .left .answer {
+  padding: 10px 0;
+  font-weight: 700;
+  color: #000;
+}
+.cards .reklam_cards_type .top .btn {
+  width: 150px;
+  border: none;
+  background-color: #ec3342;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  padding: 10px 40px;
+  font-size: 16px;
+  margin-top: 24px;
+  min-height: 51px;
+}
+.cards .reklam_cards_type .top .btn:hover {
+  background-color: #bc0c19;
+}
+.cards .reklam_cards_type .top .right {
+  padding: 40px 35px 77px 25px;
+}
+.cards .buttons {
+  text-align: center;
+  margin: 0 auto;
+}
+.cards .buttons button {
+  margin: 35px 0;
+  width: 120px;
+  height: 43px;
+  background-color: #e7e8ea;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-family: sans-serif;
+  font-size: 15px;
+}
+.cards .buttons button:hover {
+  background-color: #757575;
+  color: #fff;
+}
+.cards .cards_container {
+  margin: 0 auto;
+  row-gap: 25px;
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.cards .cards_container_item {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  background-image: url(https://img5.goodfon.com/wallpaper/nbig/d/90/fon-wallpaper-lines-abstract.jpg);
+  width: 350px;
+  height: 500px;
+  position: relative;
+}
+.cards .cards_container_item img {
+  width: 150px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.cards .cards_container_item .text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  font-family: sans-serif;
+  margin: 30px 0 0 25px;
+}
+.cards .cards_container_item .text h2 {
+  font-size: 25px;
+}
+.cards .cards_container_item .text p {
+  font-size: 15px;
+}
+.cards .cards_container_item .text h2,
+.cards .cards_container_item .text p {
+  color: #fff;
+}
+.cards .cards_container_item .text button {
+  bottom: 20px;
+  position: absolute;
+  height: 40px;
+  padding: 0px 30px;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #ec3342;
+  border: 1px solid #ec3342;
+  border-radius: 36px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+}
+.cards .cards_container_item .text button:hover {
+  background-color: #bc0c19;
+}
+.cards .security {
+  width: 60%;
+  display: flex;
+  margin: 50px auto;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.cards .security_item {
+  background-color: #f9f9fa;
+  text-align: center;
+  width: 335px;
+  height: 165px;
+  padding: 0 20px;
+}
+.cards .security_item img {
+  width: 55px;
+  height: 50px;
+  margin: 15px auto;
+}
+.cards .security_item h1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 20px;
+  font-family: sans-serif;
+}
+.cards .security_item button {
+  margin-top: 13px;
+  background-color: transparent;
+  border: 1px solid #caccd0;
+  color: #2e3131;
+  padding: 7px 25px;
+  border-radius: 6px;
+  float: right;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.cards .security_item button:hover {
+  color: #fff;
+  background-color: #2e3131;
+}
+
+.loan {
+  width: 100%;
+}
+.loan_container {
+  width: 60%;
+  margin: 0 auto;
+}
+.loan_container_contain {
+  width: 97%;
+}
+.loan_container_contain .top {
+  display: flex;
+  font-family: sans-serif;
+  color: #fff;
+  background-image: url(https://img5.goodfon.com/wallpaper/nbig/d/90/fon-wallpaper-lines-abstract.jpg);
+}
+.loan_container_contain .top .left {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  padding: 76px 40px 50px;
+}
+.loan_container_contain .top .left h1 {
+  font-size: 36px;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+.loan_container_contain .top .left h1 span {
+  color: #ec3342;
+}
+.loan_container_contain .top .left p {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.loan_container_contain .top .right {
+  padding-top: 76px;
+}
+.loan_container_contain .top .answer {
+  padding: 10px 0;
+  font-weight: 700;
+  color: #000;
+}
+.loan_container_contain .bottom {
+  text-align: center;
+  background-color: #e7e8ea;
+}
+.loan_container_contain .bottom .telinp {
+  border-radius: 17px;
+  width: 240px;
+  padding: 15px;
+  height: 50px;
+  font-size: 20px;
+  border: none;
+  box-shadow: 0px 1px 3px 0px;
+  outline: none;
+}
+.loan_container_bottom {
+  font-family: sans-serif;
+}
+.loan_container_bottom h1 {
+  margin-bottom: 30px;
+}
+.loan_container_bottom p {
+  background-color: #e8ecf1;
+  padding: 20px 3px 20px 41px;
+}
+.loan_container_bottom .list {
+  display: flex;
+  background-color: #f9f9fa;
+  justify-content: space-between;
+  padding-bottom: 45px;
+}
+.loan_container_bottom .list li {
+  list-style: disc;
+  padding: 30px 3px 0 41px;
+  font-size: 16px;
+}
+.loan_container_bottom .list .left {
+  width: 45%;
+}
+.loan_container_bottom .list .right {
+  width: 45%;
+}
+
+.odenisler {
+  background-color: rgba(240, 240, 240, 0.5647058824);
+  width: 100%;
+  padding: 40px 0;
+}
+.odenisler .title {
+  width: 40%;
+  text-align: center;
+  font-size: 35px;
+  font-family: sans-serif;
+  font-weight: 100;
+  margin: 40px 0;
+}
+.odenisler .icon_container {
+  margin: 0 auto;
+  flex-wrap: wrap;
+  display: flex;
+  row-gap: 30px;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  width: 66%;
+}
+.odenisler .icon_container .icons {
+  display: flex;
+  flex-direction: column;
+}
+.odenisler .icon_container .icons button {
+  background-color: #fff;
+  width: 290px;
+  height: 175px;
+  border: none;
+}
+.odenisler .icon_container .icons button:hover {
+  box-shadow: 0 1rem 1.5rem rgba(6, 30, 45, 0.09);
+}
+.odenisler .icon_container .icons i {
+  font-size: 40px;
+  color: #ec3342;
+}
+.odenisler .icon_container .icons p {
+  font-size: 17px;
+  margin: 15px 0;
+}
+
+.partnyorlar {
+  width: 100%;
+}
+.partnyorlar a {
+  color: #000;
+}
+.partnyorlar_container {
+  margin: 0 auto;
+  width: 60%;
+}
+.partnyorlar_container .header {
+  width: 100%;
+}
+.partnyorlar_container .filter {
+  width: 100%;
+}
+.partnyorlar_container .items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  row-gap: 20px;
+}
+.partnyorlar_container .items .item {
+  width: 270px;
+  height: 280px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1019607843);
+}
+.partnyorlar_container .items .item:hover {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3960784314);
+}
+.partnyorlar_container .items .item:hover img {
+  transition: all 0.35s;
+  scale: 1.05;
+}
+.partnyorlar_container .items .item .foto {
+  padding-top: 15px;
+  text-align: center;
+  overflow: hidden;
+}
+.partnyorlar_container .items .item .text {
+  margin: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  font-family: sans-serif;
+}
+.partnyorlar_container .items .item .text h1 {
+  font-size: 18px;
+}
+.partnyorlar_container .items .item .text p {
+  font-size: 12px;
+}
+
+.partnyorname {
+  font-family: sans-serif;
+  width: 100%;
+}
+.partnyorname .partnyor_container {
+  background-color: #f9f9f9;
+  width: 60%;
+  margin: 0 auto;
+}
+.partnyorname .partnyor_container_top {
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.partnyorname .partnyor_container_top .left {
+  align-items: center;
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.partnyorname .partnyor_container_top .left .pic img {
+  width: auto;
+  height: 80px;
+}
+.partnyorname .partnyor_container_top .left .text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.partnyorname .partnyor_container_top .right .social_icons i {
+  margin: 0 10px;
+  font-size: 35px;
+  color: #bc0c19;
+}
+.partnyorname .partnyor_container_bottom .item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  padding: 15px;
+}
+.partnyorname .partnyor_container_bottom .item i {
+  color: #bc0c19;
+  margin-right: 7px;
+}
+.partnyorname .partnyor_container_bottom .item .contact {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+.partnyorname .partnyor_container_bottom .item span {
+  opacity: 0.7;
+}
+
+.cardid .reklam {
+  row-gap: 25px;
+  width: 100%;
+}
+.cardid .reklam h1 {
+  font-weight: 100;
+}
+.cardid .reklam_container {
+  width: 60%;
+  margin: 0 auto;
+}
+.cardid .reklam_container_contain {
+  width: 97%;
+}
+.cardid .reklam_container_contain .top {
+  display: flex;
+  justify-content: space-between;
+  font-family: sans-serif;
+  color: #fff;
+  background-image: url(https://img5.goodfon.com/wallpaper/nbig/d/90/fon-wallpaper-lines-abstract.jpg);
+}
+.cardid .reklam_container_contain .top .left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  padding: 46px 40px 50px;
+}
+.cardid .reklam_container_contain .top .left h1 {
+  font-size: 36px;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+.cardid .reklam_container_contain .top .left h1 span {
+  color: #ec3342;
+}
+.cardid .reklam_container_contain .top .left p {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+.cardid .reklam_container_contain .top .left .answer {
+  padding: 10px 0;
+  font-weight: 700;
+  color: #000;
+}
+.cardid .reklam_container_contain .top .right {
+  width: 30%;
+  padding: 40px 40px;
+}
+.cardid .reklam_container_contain .top .right img {
+  width: 180px;
+  height: 285px;
+}
+.cardid .reklam_container_contain .bottom {
+  text-align: center;
+  background-color: #e7e8ea;
+}
+.cardid .reklam_container_contain .bottom .telinp {
+  border-radius: 17px;
+  width: 240px;
+  padding: 15px;
+  height: 50px;
+  font-size: 20px;
+  border: none;
+  box-shadow: 0px 1px 3px 0px;
+  outline: none;
+}
+.cardid .reklam_container_bottom {
+  font-family: sans-serif;
+}
+.cardid .reklam_container_bottom h1 {
+  margin-bottom: 30px;
+}
+.cardid .reklam_container_bottom p {
+  background-color: #e8ecf1;
+  padding: 20px 3px 20px 41px;
+}
+.cardid .reklam_container_bottom .list {
+  display: flex;
+  background-color: #f9f9fa;
+  justify-content: space-between;
+  padding-bottom: 45px;
+}
+.cardid .reklam_container_bottom .list li {
+  list-style: disc;
+  padding: 30px 3px 0 41px;
+  font-size: 16px;
+}
+.cardid .reklam_container_bottom .list .left {
+  width: 45%;
+}
+.cardid .reklam_container_bottom .list .right {
+  width: 45%;
+}
+.cardid .text {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  width: 60%;
+  margin: 0 auto;
+}
+.cardid .text .mil {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+.cardid .text .mil .lost {
+  margin-bottom: 15px;
+}
+.cardid .text .mil .left {
+  width: 75%;
+}
+.cardid .text .mil .right {
+  width: 40%;
+}
+.cardid .text p {
+  width: 75%;
+}
+.cardid .text .list {
+  width: 75%;
+  list-style: disc;
 }/*# sourceMappingURL=App.css.map */
