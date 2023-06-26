@@ -1,10 +1,22 @@
 import React from 'react'
 import {data} from './page components/loan'
+import { Link } from 'react-router-dom'
+
 
 function Kreditler() {
   return (
      data.map((item)=>(
         <div className="loan">
+          <div className="sablon">
+          <h1 className="title">Kredit</h1>
+
+          <p className="ana_page">
+          <Link to="/"><span>Ana səhifə</span> </Link>
+             <i class="fa-solid fa-angles-right"></i>
+            <span>Kredit</span>
+          </p>
+      </div>
+          
           <div className="loan_container">
 
           <div className="loan_container_contain">
@@ -35,12 +47,10 @@ function Kreditler() {
 
             <div className="bottom">
 <h1>Krediti onlayn dərhal əldə et!</h1>
-<label for="phone">Enter a phone number:</label>
-<br />
   <input className='telinp' type="tel" id="phone" name="phone" placeholder="+994-(XX)-XXX-XX-XX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required
   />
   <br />
-  <input type="submit" value="Submit"></input>
+  <input className='btn' type="submit" value="Davam et"></input>
             </div>
 
           </div>

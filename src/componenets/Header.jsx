@@ -13,6 +13,8 @@ function Header() {
   ];
 
   const [active, setactive] = useState();
+
+  
   // const [isActive, setIsActive] = useState(true);
 
   const handleClick = () => {
@@ -50,7 +52,7 @@ function Header() {
 
         <div className="right">
           <button className="sign">
-            <i class="fa-solid fa-arrow-right-to-bracket"></i>
+            <i className="fa-solid fa-arrow-right-to-bracket"></i>
             Giriş
           </button>
         </div>

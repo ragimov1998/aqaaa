@@ -1,4 +1,4 @@
-export const data = [{
+const data = [{
      about:"Gündəlik tələbat krediti şəxsi ehtiyaclarınızı qarşılayaraq büdcənizə uyğun hissə-hissə ödəmə şansı tanıyan nağd pul kreditidir.",
      what:"Kredit məbləği",
      answer:"30 000 AZN-dək",
@@ -16,4 +16,7 @@ export const data = [{
      li6:"Rəsmi gəliri olan şəxslər",
      by:"* Kapital Bank ASC 05 noyabr 2018-ci il tarixli 244 nömrəli Bank Lisenziyası əsasında fəaliyyət göstərir.",
 }
-]
+];
+     
+   export {data}
+

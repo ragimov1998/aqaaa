@@ -1,66 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { kocurme } from "./page components/securi";
 function Kocurmeler() {
   return (
     <div className="kocurmeler">
-      <div className="contain">
+      <div className="sablon">
           <h1 className="title">Köçürmələr</h1>
 
-          <p>
-          <Link to="/">Ana səhifə</Link>
-
-             <i class="fa-solid fa-angles-right"></i>
+          <p className="ana_page">
+          <Link to="/"><span>Ana səhifə</span> </Link>
+             <i className="fa-solid fa-angles-right"></i>
             <span>Köçürmələr</span>
           </p>
-
+      </div>
+      
+      <div className="contain">
+        
       <ul className="bottom">
-        <li>
-            <img src="https://birbank.az/_next/image?url=%2Fimages%2Fpng%2Ftransfer%2Fbetween_cards.png&w=48&q=75" alt="" />
-           <span> Öz kartlarım və hesablarım arasında
-          <i class="fa-solid fa-chevron-right"></i>
+        {kocurme.map((item,ind)=>(<li key={ind}>
+            <img src={item.img} alt="img" />
+           <span> {item.span}
+          <i className={item.icon}></i>
            </span>
-            
         </li>
-
-        <li>
-          <img src="https://birbank.az/_next/image?url=%2Fimages%2Fpng%2Ftransfer%2Fcard_to_card.png&w=48&q=75" alt="ist" />
-          <span>
-            İstenilƏn bank kartına
-            <i class="fa-solid fa-chevron-right"></i>
-          </span>
-
-        </li>
-
-        <li>
-          <img src="https://birbank.az/_next/image?url=%2Fimages%2Fpng%2Ftransfer%2Ftransfer_friend.png&w=48&q=75" alt="user" />
-          <span>
-            Nömrəyə köçürmə
-            <i class="fa-solid fa-chevron-right"></i>
-
-          </span>
-
-        </li>
-
-        <li>
-          <img src="https://birbank.az/_next/image?url=%2Fimages%2Fpng%2Ftransfer%2Frequest_friend.png&w=48&q=75" alt="" />
-          <span>
-            Dostdan pul sorğusu
-            <i class="fa-solid fa-chevron-right"></i>
-
-          </span>
-
-        </li>
-
-        <li>
-          <img src="https://birbank.az/_next/image?url=%2Fimages%2Fpng%2Ftransfer%2Fcash_code.png&w=48&q=75"/>
-          <span>
-            Cash by code
-          <i class="fa-solid fa-chevron-right"></i>
-
-          </span>
-
-        </li>
+        ))}
 
       </ul>
       </div>

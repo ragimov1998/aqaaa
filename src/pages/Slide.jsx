@@ -1,20 +1,6 @@
-import { click } from '@testing-library/user-event/dist/click';
+// import { click } from '@testing-library/user-event/dist/click';
 import {data} from'./page components/slide'
 function Slide() {
-
-  // const slide = document.querySelectorAll(".slider");
-  // const nextbtn = document.querySelector(".btn-next");
-  // const prevbtn = document.querySelector(".btn-prev");
-  // var currentindex = 0;
-  // function next() {
-
-    
-  // }
-  // nextbtn.addEventListener(click,()=>{
-    
-  // })
-
-
 
   return (
     
@@ -44,12 +30,14 @@ function Slide() {
               <i className={item.solicon}></i>
             </button>
           </div>
+          
 
     )
       )}
           
           
         </section>
+        
   )
 }
 

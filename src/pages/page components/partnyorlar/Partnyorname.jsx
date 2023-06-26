@@ -45,7 +45,7 @@ function Partnyorname() {
         <div className="partnyor_container_bottom">
           <div className="item">
             <p>
-              <i class="fa-solid fa-percent"></i> <b>{aadata.faiz}</b>
+              <i className="fa-solid fa-percent"></i> <b>{aadata.faiz}</b>
             </p>
             <div className="contact">
               <p>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { cards, data } from "./page components/carddata";
 import { Link } from "react-router-dom";
+import { security } from "./page components/securi";
 
 function Kartlar() {
   const [isactive, setactive] = useState("Hamisi");
@@ -18,6 +19,15 @@ function Kartlar() {
   // const buttons =["Hamisi","Taksit","Debet"]
   return (
     <div className="cards">
+      <div className="sablon">
+          <h1 className="title">Kartlar</h1>
+
+          <p className="ana_page">
+          <Link to="/"><span>Ana səhifə</span> </Link>
+             <i class="fa-solid fa-angles-right"></i>
+            <span>Kartlar</span>
+          </p>
+      </div>
       <div className="reklam">
         <div className="reklam_cards">
           <div className="reklam_cards_type">
@@ -99,43 +109,37 @@ function Kartlar() {
           </Link>
            
         ))}
-       
+      
       </div>
+
       <div className="security">
 
-        <div className="security_item">
-          <h1>
-            <img
-              src="https://birbank.az/_next/image?url=%2Fimages%2Fpng%2Fcards%2Fshield-check.png&w=48&q=75"
-              alt=""
-            />
-            <p>Təhlükəsizlik qaydaları</p>
-          </h1>
-          <button>Ətraflı</button>
-        </div>
 
-        <div className="security_item">
+        {security.slice(0,2).map((it,ind)=>(
+          <div key={ind} className="security_item">
           <h1>
             <img
-              src="https://birbank.az/_next/image?url=%2Fimages%2Fpng%2Fcards%2Fcredit-card.png&w=48&q=75"
-              alt=""
+              src={it.img}
+              alt="img"
             />
-            <p>Kartlar üzrə xidmətlər</p>
+            <p>{it.title}</p>
           </h1>
-          <button>Ətraflı</button>
+          <Link to={"/security/"+it.id}>
+          <button>{it.btn}</button>
+          </Link>
         </div>
-
-        <div className="security_item">
+        ))}
+         <div className="security_item">
           <h1>
             <img
-              src="https://birbank.az/_next/image?url=%2Fimages%2Fpng%2Fcards%2Fclock.png&w=48&q=75"
-              alt=""
+              src={security[2].img}
+              alt="img"
             />
-            <p>
-            Kartın müddətinin uzadılması
-            </p>
+            <p>{security[2].title}</p>
           </h1>
-          <button>Ətraflı</button>
+          <a href="https://www.kapitalbank.az/online-order/card-renew">
+          <button>{security[2].btn}</button>
+          </a>
         </div>
 
       </div>

@@ -1,0 +1,134 @@
+{
+  "odenisler": [
+    {
+      "id": "1",
+      "icon": "fa-solid fa-handcuffs",
+      "title": "Cərimə",
+      "page": [
+        {
+          "name": "BNA",
+          "img": "https://xeber100.com/wp-content/uploads/2019/03/7-17.jpg",
+          "id": "1605",
+          "information": "informaton/1605"
+        },
+        {
+          "name": "DYP ödənişləri",
+          "img":"https://www.yeniazerbaycan.com/yukle/shekil/2020_03_14_428375_pic_7.jpg",
+          "id": "1606",
+          "information": "informaton/1606"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "icon": "fa-solid fa-p",
+      "title": "Parking",
+      "page": [
+        {
+          "name": "28 Mall",
+          "yas": "22",
+          "id": "1604"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "icon": "fa-solid fa-mobile",
+      "title": "Mobil operator",
+      "page": [
+        {
+          "name": "28 asdsdws",
+          "yas": "22"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "icon": "fa-solid fa-landmark",
+      "title": "Kommunallar"
+    },
+    {
+      "id": 5,
+      "icon": "fa-solid fa-globe",
+      "title": "Internet"
+    },
+    {
+      "id": 6,
+      "icon": "fa-solid fa-tv",
+      "title": "TV"
+    },
+    {
+      "id": 7,
+      "icon": "fa-solid fa-phone",
+      "title": "Telefon"
+    },
+    {
+      "id": 8,
+      "icon": "fa-solid fa-shield",
+      "title": "Sığorta"
+    },
+    {
+      "id": 9,
+      "icon": "fa-solid fa-graduation-cap",
+      "title": "Təhsil"
+    },
+    {
+      "id": 10,
+      "icon": "fa-solid fa-box",
+      "title": "Xeyriyyəçilik"
+    },
+    {
+      "id": 11,
+      "icon": "fa-solid fa-gamepad",
+      "title": "Oyun"
+    },
+    {
+      "id": 12,
+      "icon": "fa-solid fa-briefcase",
+      "title": "Bank xidmətləri"
+    },
+    {
+      "id": 13,
+      "icon": "fa-brands fa-hubspot",
+      "title": "Sosial şəbəkələr"
+    },
+    {
+      "id": 14,
+      "icon": "fa-regular fa-credit-card",
+      "title": "Kredit"
+    },
+    {
+      "id": 15,
+      "icon": "fa-solid fa-building-columns",
+      "title": "Dövlət"
+    },
+    {
+      "id": 16,
+      "icon": "fa-solid fa-motorcycle",
+      "title": "Çatdırılma"
+    }
+  ],
+  "pages": [
+    {
+      "name": "BNA",
+      "yas": "25",
+      "id": "1605",
+      "information": "informaton/1502",
+      "teyinet": "Teyinat"
+    },
+    {
+      "name": "DYP",
+      "id": "1606",
+      "yas": "25",
+      "information": "informaton/1503",
+      "teyinet": "Teyinat"
+    },
+    {
+      "name": "28 Mall",
+      "id": "1604",
+      "yas": "25",
+      "information": "informaton/1503",
+      "teyinet": "barkod"
+    }
+  ]
+}
