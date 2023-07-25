@@ -1,33 +1,39 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { cards, data } from "./page components/carddata";
 import { Link } from "react-router-dom";
 import { security } from "./page components/securi";
 
 function Kartlar() {
-  const [isactive, setactive] = useState("Hamisi");
+  const [isactive, setactive] = useState("");
   const [currentdata, setcurrentdata] = useState(data[0]);
   const Taksitcard = () => {
-
     setcurrentdata(data.filter((item)=>item.typeof==="taksit"));
+    setcurrentdata(data[1]);
   };
   const Debetcard = () => {
-    setcurrentdata(data.filter((item)=>item.typeof==="debet"));
-
+    setcurrentdata(data.filter((item) => item.typeof === "debet"));
+    setcurrentdata(data[0]);
   };
-  const [cardtype,setcardtype]= useState(cards);
-
+  const [cardtype, setcardtype] = useState(cards);
+useEffect(()=>{
+window.scrollTo(0,0)
+},[])
   // const buttons =["Hamisi","Taksit","Debet"]
   return (
     <div className="cards">
-      <div className="sablon">
-          <h1 className="title">Kartlar</h1>
 
-          <p className="ana_page">
-          <Link to="/"><span>Ana səhifə</span> </Link>
-             <i class="fa-solid fa-angles-right"></i>
-            <span>Kartlar</span>
-          </p>
+      <div className="sablon">
+        <h1 className="title">Kartlar</h1>
+
+        <p className="ana_page">
+          <Link to="/">
+            <span>Ana səhifə</span>{" "}
+          </Link>
+          <i class="fa-solid fa-angles-right"></i>
+          <span>Kartlar</span>
+        </p>
       </div>
+
       <div className="reklam">
         <div className="reklam_cards">
           <div className="reklam_cards_type">
@@ -66,7 +72,9 @@ function Kartlar() {
                     <td className="what">{currentdata.qazanc}</td>
                   </tr>
                 </table>
+                <Link to={'/kartlar/1'}>
                 <button className="btn">{currentdata.btn}</button>
+                </Link>
               </div>
               <div className="right">
                 <img src={currentdata.img} alt="img" />
@@ -76,74 +84,75 @@ function Kartlar() {
         </div>
       </div>
       <div className="buttons">
-
-        <button onClick={()=>{setcardtype(cards)}} className={`${isactive==="Hamisi" ? "active" : ""}`}>
+        <button
+          onClick={() => {
+            setcardtype(cards);
+            setactive("hamisi")
+            Debetcard();
+          }}
+          className={`${isactive === "hamisi" ? "actives" : ""}`}>
           Hamısı
         </button>
 
         <button
-          onClick={()=>{setcardtype(cards.filter((item)=>item.typeof=="taksit"))}}
-          className={`${isactive==="active" ? "actives" : ""}`}
+          onClick={() => {
+            setcardtype(cards.filter((item) => item.typeof == "taksit"));
+            Taksitcard();
+            setactive("taksit")
+          }}
+          className={`${isactive === "taksit" ? "actives" : ""}`}
         >
           Taksit
         </button>
 
         <button
-          onClick={()=>{setcardtype(cards.filter((item)=>item.typeof=="debet"))}}
-          className={`${isactive ? "active" : ""}`}
+          onClick={() => {
+            setcardtype(cards.filter((item) => item.typeof == "debet"));
+            Debetcard();
+            setactive("debet")
+          }}
+          className={`${isactive === "debet" ? "actives" : ""}`}
         >
           Debet
         </button>
       </div>
       <div className="cards_container">
-        {cardtype.map((item,index)=>(
+        {cardtype.map((item, index) => (
           <Link to={item.id}>
-          <div key={index} className="cards_container_item">
-          <img src={item.img} alt="img" />
-          <div className="text">
-            <h2>{item.name}</h2>
-            <p>{item.about.slice(0, 84)}...</p>
-            <button>{item.btn}</button>
-          </div>
-        </div>
+            <div key={index} className="cards_container_item">
+              <img src={item.img} alt="img" />
+              <div className="text">
+                <h2>{item.name}</h2>
+                <p>{item.about.slice(0, 84)}...</p>
+                <button>{item.btn}</button>
+              </div>
+            </div>
           </Link>
-           
         ))}
-      
       </div>
-
       <div className="security">
-
-
-        {security.slice(0,2).map((it,ind)=>(
+        {security.slice(0, 2).map((it, ind) => (
           <div key={ind} className="security_item">
-          <h1>
-            <img
-              src={it.img}
-              alt="img"
-            />
-            <p>{it.title}</p>
-          </h1>
-          <Link to={"/security/"+it.id}>
-          <button>{it.btn}</button>
-          </Link>
-        </div>
+            <h1>
+              <img src={it.img} alt="img" />
+              <p>{it.title}</p>
+            </h1>
+            <Link to={"/security/" + it.id}>
+              <button>{it.btn}</button>
+            </Link>
+          </div>
         ))}
-         <div className="security_item">
+        <div className="security_item">
           <h1>
-            <img
-              src={security[2].img}
-              alt="img"
-            />
+            <img src={security[2].img} alt="img" />
             <p>{security[2].title}</p>
           </h1>
           <a href="https://www.kapitalbank.az/online-order/card-renew">
-          <button>{security[2].btn}</button>
+            <button>{security[2].btn}</button>
           </a>
         </div>
-
       </div>
-
+      
     </div>
   );
 }

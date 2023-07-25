@@ -2,8 +2,10 @@ import React from "react";
 import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { xeber } from "./page components/news";
+import { useEffect } from "react";
 
 function Newspage() {
+  useEffect(()=> {window.scrollTo(0,0)}, [])
   const { id } = useParams();
   const [data, setdata] = useState(xeber[id - 1]);
   return (

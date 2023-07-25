@@ -13,6 +13,10 @@ import Partnyorlar from "./pages/Partnyorlar";
 import Xeberler from "./pages/Xeberler";
 import Partnyorname from "./pages/page components/partnyorlar/Partnyorname";
 import Security from "./pages/page components/partnyorlar/Security";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Tetbiq from "./Tetbiq";
+import DarkLight from "./pages/DarkMod";
 
 
 export const routes = [
@@ -73,7 +77,23 @@ export const routes = [
         element:<Security></Security>
     },
     {
-        path:'/information/:id',
+        path:'/attributes/information/:id',
         element:<Ss></Ss>
     },
+    {
+        path:'/register',
+        element:<Register></Register>
+    },
+    {
+        path:'/login',
+        element:<Login></Login>
+    },
+    {
+        path:'/tetbiqiyukle',
+        element:<Tetbiq></Tetbiq>
+    },
+    {
+        path:'/dark',
+        element:<DarkLight></DarkLight>
+    }
 ];

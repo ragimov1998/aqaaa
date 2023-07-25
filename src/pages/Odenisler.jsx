@@ -1,22 +1,20 @@
 import React, { useEffect } from "react";
-import { odenisler } from "./page components/productwidget";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 
 function Odenisler() {
-  const [data, setdata] = useState([]);
+  const [datalar, setdata] = useState([]);
 
+  const parameters = useParams()
+  const {id} = parameters
+  console.log(id);
 
   async function getData(){
 
-    await axios.get('http://localhost:3300/odenisler').then((res)=>{
-     setdata(res.data)
-
-    }).catch((err)=>{
-      console.log(err)
-
-    })
+    await axios.get('http://localhost:3300/odenisler')
+    .then((res)=>{setdata(res.data)})
+    .catch((err)=>{console.log(err)})
   }
 
   useEffect(()=>{
@@ -28,7 +26,7 @@ function Odenisler() {
     <div className="odenisler">
       <h1 className="title">Ödəniş</h1>
       <div className="icon_container">
-        {data.map((item, index) => (
+        {datalar.map((item, index) => (
           <Link key={index}  to={item.id}>
             <div className="icons">
               <button>

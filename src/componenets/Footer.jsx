@@ -56,7 +56,7 @@ function Footer() {
 
         <p className="rule">
           © 2023 «Kapital Bank» ASC. Bütün hüquqlar Rəhimov Rəhim tərəfindən
-          qorunur. İçiniz rahat olsun.
+          qorunur.
         </p>
       </div>
       <div className="right">

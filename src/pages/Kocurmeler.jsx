@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { kocurme } from "./page components/securi";
 function Kocurmeler() {
+  useEffect(()=>{
+    window.scrollTo(0,0)
+},[])
   return (
     <div className="kocurmeler">
       <div className="sablon">
@@ -15,8 +18,8 @@ function Kocurmeler() {
       </div>
       
       <div className="contain">
-        
-      <ul className="bottom">
+        <Link to='/tetbiqiyukle'>
+        <ul style={{color:"black"}} className="bottom">
         {kocurme.map((item,ind)=>(<li key={ind}>
             <img src={item.img} alt="img" />
            <span> {item.span}
@@ -26,6 +29,8 @@ function Kocurmeler() {
         ))}
 
       </ul>
+        </Link>
+      
       </div>
      
     </div>

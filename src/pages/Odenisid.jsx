@@ -2,13 +2,17 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
-import { odenisler } from "./page components/productwidget";
+import Companent from "../componenets/Companent";
 
 function Odenisid() {
   const { id } = useParams();
-  console.log(id);
   const [lab, setlab] = useState([]);
-  const [ode, setode] = useState(odenisler);
+  const [ode, setode] = useState([]);
+  const [bos,setbos]=useState();
+
+
+
+
 
   async function getData() {
     await axios
@@ -22,35 +26,41 @@ function Odenisid() {
         console.log(err);
       });
   }
+  async function odedata( ){
+    await axios
+    .get(`http://localhost:3300/odenisler/`)
+    .then((res)=>{setode(res.data);
+    })
+  }
 
   useEffect(() => {
     getData();
-  }, []);
+    odedata()
+    bbb()
+  }, [id]);
+  function bbb (ite){
+    setbos(ite)
+    bos&&setlab(bos)
+
+  }
+  
   return (
     <div className="odenis_info">
-      <div className="left">
-        {ode.map((i, x) => (
-            <div key={x} className="container">
-              <div className="icon">
-              <i className={i.icon}></i>
-              </div>
-                <p>
-                {i.title}
-              </p>
+<Companent pageID={id}></Companent>
+
+
+      <div className="right">
+        {lab.page &&lab.page.map((item, ind) => (
+            <div key={ind}  className="odenis_info_item">
+              <Link to={`/attributes/information/${item.id}`}>
+                <div className="foto">
+                <img src={item.img} alt="foto" />
+                </div>
+                <p className="name">{item.name}</p>
+              </Link>
             </div>
-        ))}
+          ))}
       </div>
-      {lab.page &&
-        lab.page.map((item, ind) => (
-          <Link key={ind} to={`/information/${item.id}`}>
-            <div className="right">
-              <div className="odenis_info_item">
-              <img src={item.img} alt="foto" />
-              <p>{item.name}</p>
-            </div>
-            </div>
-          </Link>
-        ))}
     </div>
   );
 }

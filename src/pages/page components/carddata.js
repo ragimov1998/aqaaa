@@ -4,7 +4,8 @@ const data = [
     about:
       "1.5%-dən başlayan keşbek imkanı. Keşbek partnyor mağazalarda partnyor üzrə təyin edilmiş faiz dərəcəsi ilə hesablanır. Əlavə olaraq nağdsız POS terminal əməliyyatları zamanı qaytarılan ƏDV məbləği qədər bonusu bizdən qazanın.",
     kesbek: "2 qat ƏDV və 30%-dək keşbek",
-    img: "https://birbank.az/_next/image?url=https%3A%2F%2Fs3.eu-central-1.amazonaws.com%2Fcontent.birbank.az%2F2402419991_b4767308f5.png&w=256&q=75",
+    
+    img: "https://birbank.az/_next/image?url=https%3A%2F%2Fs3.eu-central-1.amazonaws.com%2Fcontent.birbank.az%2FBRCB_BLACK_4e57c12366.png&w=256&q=75",
     cartprice: "Pulsuz",
     cartpricetitle: "Kartın qiyməti",
     bonus: "Bonuslar",
@@ -19,7 +20,7 @@ const data = [
     about:
       "Kartla edilən nağdsız ödənişlərə minimum 1.5%-dən başlayan keşbek, faizsiz və komissiyasız taksit imkanı verən unikal bir kartdır.",
     kesbek: "Keşbek",
-    img: "https://birbank.az/_next/image?url=https%3A%2F%2Fs3.eu-central-1.amazonaws.com%2Fcontent.birbank.az%2F2402419991_b4767308f5.png&w=256&q=75",
+    img: "https://birbank.az/_next/image?url=https%3A%2F%2Fs3.eu-central-1.amazonaws.com%2Fcontent.birbank.az%2FBRCB_BLACK_4e57c12366.png&w=256&q=75",
     faiz: "1.5%-dən başlayan",
     cartprice: "Pulsuz",
     cartpricetitle: "Kartın qiyməti",
@@ -35,7 +36,8 @@ const cards = [
     backgroundimg:
       "https://cdn.shopify.com/s/files/1/0137/7098/1462/products/RFIDCompactNoteWallet02square_2048x.jpg?v=1675425742",
     id: "1",
-    img: "https://birbank.az/_next/image?url=https%3A%2F%2Fs3.eu-central-1.amazonaws.com%2Fcontent.birbank.az%2F2402419991_b4767308f5.png&w=256&q=75",
+    img: "https://birbank.az/_next/image?url=https%3A%2F%2Fs3.eu-central-1.amazonaws.com%2Fcontent.birbank.az%2FBRCB_BLACK_4e57c12366.png&w=256&q=75",
+
     name: "Birbank Cashback",
     about:
       "1.5%-dən başlayan keşbek imkanı. Keşbek partnyor mağazalarda partnyor üzrə təyin edilmiş faiz dərəcəsi ilə hesablanır. Əlavə olaraq nağdsız POS terminal əməliyyatları zamanı qaytarılan ƏDV məbləği qədər bonusu bizdən qazanın.",
@@ -54,7 +56,7 @@ const cards = [
         muddetinadi: "Kartın müddəti",
         cardprice: "Pulsuz",
         pricetitle: "Kartın qiyməti",
-        img: "https://birbank.az/_next/image?url=https%3A%2F%2Fs3.eu-central-1.amazonaws.com%2Fcontent.birbank.az%2F2402419991_b4767308f5.png&w=256&q=75",
+        img: "https://birbank.az/_next/image?url=https%3A%2F%2Fs3.eu-central-1.amazonaws.com%2Fcontent.birbank.az%2FBRCB_BLACK_4e57c12366.png&w=256&q=75",
       },
     ],
     cardabout: [
@@ -280,7 +282,7 @@ const cards = [
   },
   {
     id: "5",
-    img: "https://birbank.az/_next/image?url=https%3A%2F%2Fs3.eu-central-1.amazonaws.com%2Fcontent.birbank.az%2F2402419991_b4767308f5.png&w=256&q=75",
+    img:"https://birbank.az/_next/image?url=https%3A%2F%2Fs3.eu-central-1.amazonaws.com%2Fcontent.birbank.az%2FBRCB_BLACK_4e57c12366.png&w=256&q=75",
     name: "Birbank Cashback Taksit",
     about:
       "Kartla edilən nağdsız ödənişlərə minimum 1.5%-dən başlayan keşbek, faizsiz və komissiyasız taksit imkanı verən unikal bir kartdır...",
@@ -297,7 +299,8 @@ const cards = [
         pricetitle: "Kartın qiyməti",
         guzest: "Güzəşt müddəti",
         guzestmuddeti: "63 günədək",
-        img: "https://birbank.az/_next/image?url=https%3A%2F%2Fs3.eu-central-1.amazonaws.com%2Fcontent.birbank.az%2F2402419991_b4767308f5.png&w=256&q=75",
+        img:"https://birbank.az/_next/image?url=https%3A%2F%2Fs3.eu-central-1.amazonaws.com%2Fcontent.birbank.az%2FBRCB_BLACK_4e57c12366.png&w=256&q=75",
+
       },
     ],
     cardabout: [
@@ -317,8 +320,7 @@ const cards = [
           "2 qat ƏDV bonusunu əldə etmək üçün: Kassa çeki edvgerial.kapitalbank.az və Birbank tətbiqindən skan edilməlidir. Kart sahibinin FİN kodu və edvgerial.kapitalbank.az portalında qeydiyyatda olan FİN kod eyni olmalıdır. Ödəniş tam olaraq nağdsız və ya birdəfəlik şəkildə ödənilməldir. Əməliyyat zamanı kassa aparatı ilə POS terminal aparatının çap etdiyi çeklər arasında vaxt fərqi 30 dəqiqədən artıq olmamalıdır. Çek üzrə əsas ƏDV qaytarıldıqdan dərhal sonra 2 qat ƏDV məbləği də qaytarılacaqdır;",
           "11 aprel 2023-cü il tarixindən etibarən 2 qat ƏDV məbləğinin aylıq maksimum limiti 20₼ olaraq təyin ediləcək. Limit yalnız 2-ci qata və qeyd olunan tarixdən sonra yaranmış çeklərə şamil olunur. 'ƏDV geri al' məhsul şərtlərinə uyğun olaraq (https://www.edvgerial.az) 1-ci qat ƏDV məbləğini isə heç bir limit olmadan geri almağa davam edəcəksiniz.",
         ],
-        milp:"* Kapital Bank ASC 05 noyabr 2018-ci il tarixli 244 nömrəli Bank Lisenziyası əsasında fəaliyyət göstərir.",
-
+        milp: "* Kapital Bank ASC 05 noyabr 2018-ci il tarixli 244 nömrəli Bank Lisenziyası əsasında fəaliyyət göstərir.",
       },
     ],
   },
@@ -361,8 +363,7 @@ const cards = [
           "Kartın əlavə üstünlükləri: MC Airport Experiences, Lounge Key xidmətləri daxildir;",
           "Tələb olunan sənədlər: Şəxsiyyət vəsiqəsi və ya Hərbçinin şəxsi vəsiqəsi;",
         ],
-        milp:"* Kapital Bank ASC 05 noyabr 2018-ci il tarixli 244 nömrəli Bank Lisenziyası əsasında fəaliyyət göstərir.",
-
+        milp: "* Kapital Bank ASC 05 noyabr 2018-ci il tarixli 244 nömrəli Bank Lisenziyası əsasında fəaliyyət göstərir.",
       },
     ],
   },
@@ -407,8 +408,7 @@ const cards = [
           "Tələb olunan sənədlər: Şəxsiyyət vəsiqəsi və ya Hərbçinin şəxsi vəsiqəsi;",
           "Umico Keşbek – Alış-veriş məbləğinin bir hissəsinin Umico və Birbank mobil tətbiqlərindəki umico bonus hesabına qaytarılmasıdır. Bonuslar real pul ekvivalentindədir və Umico partnyor şəbəkəsindəki alış-verişlər zamanı istifadə edilə bilər. Umico və Birbank-dan ortaq bonuslarınızı qazanmaq üçün alış-veriş edərkən həm Birbank Umico Premium bank kartı, həm də Umico bonus kartınızı kassirə təqdim etməyiniz kifayətdir. Umico bonusları ilə 1 ay ərzində qazanıla bilinən maksimum keşbek məbləği 500 AZN-dir. Bu limitdən yuxarı bonuslar hesablanmır və növbəti ay üçün də nəzərə alınmır;",
         ],
-        milp:"* Kapital Bank ASC 05 noyabr 2018-ci il tarixli 244 nömrəli Bank Lisenziyası əsasında fəaliyyət göstərir.",
-
+        milp: "* Kapital Bank ASC 05 noyabr 2018-ci il tarixli 244 nömrəli Bank Lisenziyası əsasında fəaliyyət göstərir.",
       },
     ],
   },
@@ -452,8 +452,7 @@ const cards = [
           "Tələb olunan sənədlər: Şəxsiyyət vəsiqəsi və ya Hərbçinin şəxsi vəsiqəsi;",
           "Umico Keşbek – Alış-veriş məbləğinin bir hissəsinin Umico və Birbank mobil tətbiqlərindəki umico bonus hesabına qaytarılmasıdır. Bonuslar real pul ekvivalentindədir və Umico partnyor şəbəkəsindəki alış-verişlər zamanı istifadə edilə bilər. Umico və Birbank-dan ortaq bonuslarınızı qazanmaq üçün alış-veriş edərkən həm Birbank Umico Premium bank kartı, həm də Umico bonus kartınızı kassirə təqdim etməyiniz kifayətdir. Umico bonusları ilə 1 ay ərzində qazanıla bilinən maksimum keşbek məbləği 500 AZN-dir. Bu limitdən yuxarı bonuslar hesablanmır və növbəti ay üçün də nəzərə alınmır;",
         ],
-        milp:"* Kapital Bank ASC 05 noyabr 2018-ci il tarixli 244 nömrəli Bank Lisenziyası əsasında fəaliyyət göstərir.",
-
+        milp: "* Kapital Bank ASC 05 noyabr 2018-ci il tarixli 244 nömrəli Bank Lisenziyası əsasında fəaliyyət göstərir.",
       },
     ],
   },

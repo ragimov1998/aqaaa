@@ -4,11 +4,23 @@ import Homecenter from "./page components/Homecenter";
 import { widget } from "./page components/productwidget";
 import { Link } from "react-router-dom";
 import { valyuta } from "./page components/securi";
+
 function Home() {
   const [ayliqOdenis, setAyliqOdenis] = useState(0);
-  const [alinacaq, setalinacaq] = useState(10000);
-  const [faiz, setfaiz] = useState(15);
-  const [muddet, setmuddet] = useState(12);
+  const [alinacaq, setalinacaq] = useState(0);
+  const [faiz, setfaiz] = useState(12);
+  const [muddet, setmuddet] = useState(3);
+
+  const [scrollTOP, setScrollTOP] = useState(0)
+  const [showButton, setShowButton] = useState(false)
+
+  useEffect(()=> {
+    window.addEventListener('scroll', ()=> {
+      setScrollTOP(window.scrollY)
+    })
+  },[])
+
+  console.log(showButton)
 
   const handleInputChange = (e) => {
     const value = +e.target.value;
@@ -39,6 +51,7 @@ function Home() {
 
     setAyliqOdenis(ayliqOdenis);
   };
+  
 
   return (
     <div className="home">
@@ -141,6 +154,10 @@ function Home() {
           <div className="right">
             <p>Aylıq ödəniş</p>
             <h1>{ayliqOdenis}AZN</h1>
+            <Link to='/kreditler'>
+              <button>Sifariş et</button>
+            </Link>
+            
           </div>
         </div>
       </div>
@@ -203,8 +220,18 @@ function Home() {
               </div>
             ))}
           </div>
+          <a style={{margin:"10px",fontSize:"14px"}} href="https://birbank.az/currency-rates">
+          <p>ətraflı<i class="fa-solid fa-arrow-right-long" style={{margin:"0 5px"}}></i></p>
+          </a>
         </div>
       </div>
+
+      {
+        scrollTOP>20?<button onClick={()=> window.scrollTo(0,0)}  id="myBtn" title="Go to top">
+        <i class="fa-solid fa-chevron-up fa-fade"></i>
+        </button>:''
+      }
+
     </div>
   );
 }

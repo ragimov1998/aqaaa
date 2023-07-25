@@ -2,8 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { komp } from "./page components/kampanyadata";
 import { useState } from "react";
+import { useEffect } from "react";
 
 function Kampaniyalar() {
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
   const [dt, setdt] = useState(komp);
   const currentDate = new Date();
   const day =

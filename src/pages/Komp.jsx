@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { komp } from "./page components/kampanyadata";
 import { useParams } from "react-router-dom";
 
 function Komp() {
   const { id } = useParams();
   const [datas, setdata] = useState(komp[id - 1]);
+  useEffect(()=>{
+    window.scrollTo(0,0);
+  },[])
   return (
     <div className="kompaniyanin_xalasiqizi">
       {datas.page.map((itt) => (

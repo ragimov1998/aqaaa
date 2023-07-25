@@ -1,9 +1,13 @@
 import React from 'react'
 import {data} from './page components/loan'
 import { Link } from 'react-router-dom'
+import { useEffect } from 'react'
 
 
 function Kreditler() {
+  useEffect(()=>{
+window.scrollTo(0,0)
+  },[])
   return (
      data.map((item)=>(
         <div className="loan">
@@ -23,7 +27,7 @@ function Kreditler() {
 
             <div className="top">
               <div className="left">
-                <h1> <span>Gündəlik </span> tələbat krediti</h1>
+                <h1> <span>Nağd</span>pul krediti</h1>
               <p>{item.about}</p>
               <table>
                 <tr>

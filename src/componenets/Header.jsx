@@ -1,5 +1,6 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import DarkLight from "../pages/DarkMod";
 
 function Header() {
   const headlist = [
@@ -11,20 +12,37 @@ function Header() {
     "kampaniyalar",
     "xəbərlər",
   ];
-
+  const removeItem = () => {
+    localStorage.removeItem('user');
+    window.location.reload()
+    };
   const [active, setactive] = useState();
-
-  
-  // const [isActive, setIsActive] = useState(true);
+  const [distance, setDistance] = useState(0);
+  const [user, setUser] = useState();
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      setDistance(window.scrollY);
+    });
+    setUser(JSON.parse(localStorage.getItem("user")));
+  }, []);
 
   const handleClick = () => {
-    // setIsActive(false);
-
     window.location.href = "/";
   };
+  const navigate=useNavigate()
 
   return (
-    <div className="header-contain">
+    <div
+      style={{
+        position: "sticky",
+        top: "0",
+        left: "0",
+        background: "white",
+        zIndex: "99999",
+        boxShadow: `${distance > 0 ? "0 2px 10px 0 rgba(0,0,0,.15)" : ""}`,
+      }}
+      className="header-contain"
+    >
       <div className="poster">
         <Link to="">
           <img
@@ -51,12 +69,25 @@ function Header() {
         </div>
 
         <div className="right">
-          <button className="sign">
-            <i className="fa-solid fa-arrow-right-to-bracket"></i>
-            Giriş
-          </button>
+          {/* <Link to='/login'> */}
+
+          {user ? (
+            <button onClick={() => removeItem()} className="sign">
+              <i className="fa-solid fa-arrow-right-to-bracket"></i>
+              {user[0].ad}
+            </button>
+          ) : (
+            <button onClick={() => navigate('/login')} className="sign">
+              <i className="fa-solid fa-arrow-right-to-bracket"></i>
+              Giris
+            </button>
+          )}
+          {/* </Link> */}
         </div>
+        <DarkLight></DarkLight>
+
       </div>
+
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { part } from "../partnyordata";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
@@ -6,6 +6,7 @@ import GoogleMapReact from "google-map-react";
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
 function Partnyorname() {
+  useEffect(()=> {window.scrollTo(0,0)}, [])
   const { id } = useParams();
   const [aadata, setissdata] = useState(part[id - 1]);
   console.log(aadata);
@@ -64,7 +65,7 @@ function Partnyorname() {
           </div>
         </div>
         <div style={{ margin:"0 auto", height: "80vh", width: "80%" }}>
-          <GoogleMapReact
+          <GoogleMapReact 
             bootstrapURLKeys={{ key: "" }}
             defaultCenter={defaultProps.center}
             defaultZoom={defaultProps.zoom}

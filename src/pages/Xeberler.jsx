@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { xeber } from './page components/news'
 import { useState } from 'react'
 
 
 function Xeberler() {
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
   const [ data,setdata]=useState(xeber);
   return (
     <div className='news'>
