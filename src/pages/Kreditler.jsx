@@ -1,10 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {data} from './page components/loan'
 import { Link } from 'react-router-dom'
 import { useEffect } from 'react'
 
 
 function Kreditler() {
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [isValidPhoneNumber, setIsValidPhoneNumber] = useState(false);
+
+  const validatePhoneNumber = (input) => {
+    // const phoneRegex = /^(\+994|994|0)(50|51|55|70|77)(\d{7}|\d{2}-\d{3}-\d{2}-\d{2})$/;
+    const phoneRegex = /^\+994-(5[015]|70|77|99)-\d{3}-\d{2}-\d{2}$/;
+    return phoneRegex.test(input);
+  };
+
+  const handlePhoneNumberChange = (e) => {
+    const inputValue = e.target.value;
+    if (/^\d*$/.test(inputValue)) {
+      setPhoneNumber(inputValue);
+      setIsValidPhoneNumber(validatePhoneNumber(inputValue));
+    }
+  };
   useEffect(()=>{
 window.scrollTo(0,0)
   },[])
@@ -51,8 +67,23 @@ window.scrollTo(0,0)
 
             <div className="bottom">
 <h1>Krediti onlayn dərhal əldə et!</h1>
-  <input className='telinp' type="tel" id="phone" name="phone" placeholder="+994-(XX)-XXX-XX-XX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required
-  />
+<input
+        className="telinp"
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="+994-(XX)-XXX-XX-XX"
+        value={phoneNumber}
+        onChange={handlePhoneNumberChange}
+        required
+      />
+      {isValidPhoneNumber ? (
+        <p>Valid phone number!</p>
+      ) : (
+        <p>Invalid phone number. Please enter in the format '+994-90-234-23-33'.</p>
+      )}
+  {/* <input className='telinp' type="tel" id="phone" name="phone" placeholder="+994-(XX)-XXX-XX-XX" pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required
+  /> */}
   <br />
   <input className='btn' type="submit" value="Davam et"></input>
             </div>
